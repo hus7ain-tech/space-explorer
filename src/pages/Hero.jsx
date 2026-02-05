@@ -189,8 +189,10 @@ const Hero = () => {
 
                 {/* CTA Button */}
                 <div ref={ctaRef} className="pointer-events-auto">
-                    <button
+                    <a
+                        href="#timeline"
                         className="
+                            inline-block
                             group relative px-8 py-4 bg-white text-black 
                             font-unbounded font-bold text-sm tracking-widest uppercase
                             overflow-hidden
@@ -205,7 +207,7 @@ const Hero = () => {
                                 Start exploring
                             </span>
                         </div>
-                    </button>
+                    </a>
                 </div>
 
             </div>

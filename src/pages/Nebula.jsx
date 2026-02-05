@@ -54,7 +54,7 @@ export const Nebula = () => {
     }, { scope: containerRef })
 
     return (
-        <div ref={containerRef} className='relative min-h-screen md:h-screen bg-white overflow-hidden'>
+        <div id="nebula" ref={containerRef} className='relative min-h-screen md:h-screen bg-white overflow-hidden'>
 
             <div ref={wrapperRef} className='flex flex-col md:flex-row h-auto md:h-full w-full md:w-[300vw]'>
                 {slides.map((slide) => (

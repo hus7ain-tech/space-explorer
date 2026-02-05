@@ -50,10 +50,14 @@ export const Navbar = () => {
                 </div>
 
                 <div className="flex items-center gap-8">
-                    {['Mission', 'Ships', 'Crew'].map((item) => (
+                    {[
+                        { name: 'Mission', link: '#nebula' },
+                        { name: 'Ships', link: '#ships' },
+                        { name: 'Crew', link: '#crew' }
+                    ].map((item) => (
                         <a
-                            key={item}
-                            href={`#${item.toLowerCase()}`}
+                            key={item.name}
+                            href={item.link}
                             className="
                                 group text-sm font-medium text-gray-300 
                                 hover:text-white
@@ -62,10 +66,10 @@ export const Navbar = () => {
                         >
                             <div className="relative overflow-hidden h-[1.2em]">
                                 <span className="block group-hover:-translate-y-[150%] transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]">
-                                    {item}
+                                    {item.name}
                                 </span>
                                 <span className="absolute top-0 left-0 block translate-y-[150%] group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]">
-                                    {item}
+                                    {item.name}
                                 </span>
                             </div>
                         </a>

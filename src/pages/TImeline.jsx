@@ -95,7 +95,7 @@ export const Timeline = () => {
     }, { scope: containerRef });
 
     return (
-        <div ref={containerRef} className="relative min-h-screen bg-[#1a1a1a] py-20 overflow-hidden">
+        <div id="timeline" ref={containerRef} className="relative min-h-screen bg-[#1a1a1a] py-20 overflow-hidden">
             {/* Sunrise Gradient Effect */}
             <div className="absolute top-0 left-0 w-[1000px] h-[1000px] bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.15),transparent_70%)] z-0 pointer-events-none blur-3xl" />
 

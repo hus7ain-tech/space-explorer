@@ -20,6 +20,25 @@ export const App = () => {
     }
 
     requestAnimationFrame(raf)
+
+    const handleAnchorClick = (e) => {
+      const link = e.target.closest('a');
+      if (link && link.getAttribute('href')?.startsWith('#')) {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          lenis.scrollTo(targetElement, { duration: 1.5 }); // Added duration for smoother effect
+        }
+      }
+    };
+
+    document.addEventListener('click', handleAnchorClick);
+
+    return () => {
+      document.removeEventListener('click', handleAnchorClick);
+      lenis.destroy();
+    };
   }, [])
 
   return (

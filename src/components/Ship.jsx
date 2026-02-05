@@ -42,7 +42,7 @@ export const Ship = () => {
     }, { scope: containerRef });
 
     return (
-        <div ref={containerRef} className="m-4 md:m-10 px-4 md:px-10 bg-white max-w-6xl mx-auto font-space-grotesk">
+        <div id="ships" ref={containerRef} className="m-4 md:my-10 md:mx-auto px-4 md:px-10 bg-white max-w-6xl font-space-grotesk">
 
             {/* Title */}
             <div className="flex items-center justify-center mb-10">
